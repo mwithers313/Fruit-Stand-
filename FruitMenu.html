@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: green;
+    clear: left;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+</style>
+</head>
+
+
+<body>
+<div class="container">
+
+
+<header>
+   <h1>The Fruit Menu</h1>
+</header>
+  
+
+<nav>
+<img src="apple.jpg" alt="apples" style="width:150px;height:100px;">
+</nav>
+
+
+
+<article>
+ <p><u>Welcome to The Fruit Menu</u><br>
+  Please select the items you would like to purchase:</p>
+<table style="width:100%">
+  <tr>
+    <th><u>Product</u></th>
+    <th><u>Price</u></th> 
+    <th><u>Add item to cart</u></th>
+  </tr>
+
+  <tr>
+    <td align="center">Apples</td>
+    <td align="center">$3.00</td>
+    <td align="center"> <button onclick="fruit.push('Apples'); price.push(3.00);">Apples</button>
+  </tr>
+
+  <tr>
+    <td align="center">Grapes</td>
+    <td align="center">$2.50</td>
+    <td align="center"> <button onclick="fruit.push('Grapes'); price.push(2.50);">Grapes</button>
+  </tr>
+
+  <tr>
+    <td align="center">Bananas</td>
+    <td align="center">$3.00</td>
+    <td align="center"> <button onclick="fruit.push('Bananas'); price.push(3.00);">Bananas</button>
+  </tr>
+
+<tr>
+    <td align="center">Peaches</td>
+    <td align="center">$3.00</td>
+    <td align="center"> <button onclick="fruit.push('Peaches'); price.push(3.00);">Peaches</button>
+  </tr>
+
+  <tr>
+    <td align="center">Pears</td>
+    <td align="center">$2.50</td>
+    <td align="center"> <button onclick="fruit.push('Pears'); price.push(2.50);">Pears</button>
+  </tr>
+
+  <tr>
+    <td align="center">Plums</td>
+    <td align="center">$3.00</td>
+    <td align="center"> <button onclick="fruit.push('Plums'); price.push(3.00);">Plums</button>
+  </tr>
+
+  <tr>
+    <td align="center">Pineapples</td>
+    <td align="center">$3.00</td>
+    <td align="center"> <button onclick="fruit.push('Pineapples'); price.push(3.00);">Pineapples</button>
+  </tr>
+
+  <tr>
+    <td align="center">Raspberries</td>
+    <td align="center">$2.50</td>
+    <td align="center"> <button onclick="fruit.push('Raspberries'); price.push(2.50);">Raspberries</button>
+  </tr>
+
+  <tr>
+    <td align="center">Blueberries</td>
+    <td align="center">$3.00</td>
+    <td align="center"> <button onclick="fruit.push('Blueberries'); price.push(3.00);"> Blueberries</button>
+  </tr>
+
+</table>
+
+<button type="button" onclick="display()">Click to see total:</button>
+
+
+ </article>
+<footer>Copyright &copy; Grand Circus</footer>
+</div>
+
+
+
+<script>
+
+ var price =[];
+  var fruit = [];
+  var total = 0;
+
+function display() {
+document.write("Items Purchased:" + "<br>");
+for (var i = 0; i < fruit.length; i++) {
+  document.write(fruit[i] + "<br>");
+     
+  }
+  for (var j = 0; j <fruit.length; j++){
+    total = total + price[j];
+}
+    document.write("Total: $" + total);
+}
+
+  </script>
+
+
+
+</body>
+</html>
